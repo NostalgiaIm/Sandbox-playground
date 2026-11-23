@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+/*
+Go 的返回值可以被命名。如果命名了返回值，
+它们会被视为定义在函数顶部的变量。
+这些名称应当用于说明返回值的含义。
+不带参数的 return 语句会返回命名返回值。
+这称为“裸返回”。
+裸返回语句只应在短函数中使用，就像这里展示的示例一样。
+在较长的函数中使用裸返回会影响可读性。
+*/
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}
+func main() {
+	fmt.Println(split(17))
+}
